@@ -7,11 +7,6 @@ import { storiesOf } from '@storybook/vue'
 import HelloWorld from '../packages/HelloWorld/index'
 import Select from '../packages/Select/index'
 import 'element-ui/lib/theme-chalk/index.css'
-import ElementUI from 'element-ui'
-import Vue from 'vue'
-
-Vue.use(ElementUI)
-
 
 storiesOf("Welcome", module).add("to Storybook", () => ({
   components: { Welcome },
