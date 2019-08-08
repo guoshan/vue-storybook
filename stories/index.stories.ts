@@ -7,12 +7,19 @@ import { storiesOf } from '@storybook/vue'
 import HelloWorld from '../packages/HelloWorld/index'
 import Select from '../packages/Select/index'
 import 'element-ui/lib/theme-chalk/index.css'
+import someMarkdownText from './someMarkdownText.md'
 
 storiesOf("Welcome", module).add("to Storybook", () => ({
   components: { Welcome },
   template: '<welcome :showApp="action" />',
   methods: { action: linkTo("Button") }
 }));
+
+storiesOf('Component', module).add('With Markdown',() => ({
+  components: { MyButton },
+  template: `<my-button></my-button>`
+}), {notes: { markdown: someMarkdownText }});
+
 
 storiesOf("Button", module)
   .add("My first button story", () => ({

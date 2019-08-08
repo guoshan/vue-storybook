@@ -2,7 +2,7 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
 module.exports = (storybookBaseConfig) => {
   const config = storybookBaseConfig.config
-  config.resolve.extensions.push('.ts', '.tsx', '.vue', '.css', '.less', '.scss', '.sass', '.html')
+  config.resolve.extensions.push('.ts', '.tsx', '.vue', '.css', '.less', '.scss', '.sass', '.html', '.md')
 
   config.module.rules.push({
     test: /\.(ts|tsx)$/,
